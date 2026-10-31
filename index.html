@@ -8,8 +8,12 @@
       font-family: sans-serif; 
       margin: 20px; 
     }
-    /* Interactive hover rule */
+    /* Interactive hover rules */
     rect:hover {
+      opacity: 0.85;
+      cursor: pointer;
+    }
+    circle:hover {
       opacity: 0.85;
       cursor: pointer;
     }
@@ -18,6 +22,7 @@
 <body>
   <h1>SVG Coding Assignment</h1>
 
+  <!-- Image 001 – Concept Map -->
   <section>
     <h2>Image 001 – Concept Map</h2>
     <svg width="840" height="430" viewBox="0 0 840 430">
@@ -94,6 +99,128 @@
       <!-- Diagram labels -->
       <g id="learns-label">
         <text x="423" y="136" font-family="sans-serif" font-size="16" text-anchor="middle" fill="#000000">learns</text>
+      </g>
+    </svg>
+  </section>
+
+  <!-- Image 002 – Binary Heap Tree -->
+  <section>
+    <h2>Image 002 – Binary Heap Tree</h2>
+    <svg width="592" height="377" viewBox="0 0 592 377">
+      
+      <!-- 1. Connecting Lines (drawn centre-to-centre first) -->
+      <g id="edges" stroke="#000000" stroke-width="1">
+        <!-- 16 to 14 and 10 -->
+        <line x1="325" y1="56" x2="200" y2="147" />
+        <line x1="325" y1="56" x2="470" y2="147" />
+        
+        <!-- 14 to 8 and 7 -->
+        <line x1="200" y1="147" x2="110" y2="232" />
+        <line x1="200" y1="147" x2="282" y2="232" />
+        
+        <!-- 10 to 9 and 3 -->
+        <line x1="470" y1="147" x2="402" y2="232" />
+        <line x1="470" y1="147" x2="540" y2="232" />
+        
+        <!-- 8 to 2 and 4 -->
+        <line x1="110" y1="232" x2="42" y2="325" />
+        <line x1="110" y1="232" x2="180" y2="325" />
+        
+        <!-- 7 to 1 -->
+        <line x1="282" y1="232" x2="254" y2="325" />
+      </g>
+
+      <!-- 2. Heap Circles (white fill, black stroke, r="28") -->
+      <g id="nodes" fill="#FFFFFF" stroke="#000000" stroke-width="1">
+        <circle cx="325" cy="56" r="28" />
+        <circle cx="200" cy="147" r="28" />
+        <circle cx="470" cy="147" r="28" />
+        <circle cx="110" cy="232" r="28" />
+        <circle cx="282" cy="232" r="28" />
+        <circle cx="402" cy="232" r="28" />
+        <circle cx="540" cy="232" r="28" />
+        <circle cx="42" cy="325" r="28" />
+        <circle cx="180" cy="325" r="28" />
+        <circle cx="254" cy="325" r="28" />
+      </g>
+
+      <!-- 3. Node Values (centred inside circles) -->
+      <g id="node-values" font-family="sans-serif" font-size="16" text-anchor="middle" fill="#000000">
+        <text x="325" y="62">16</text>
+        <text x="200" y="153">14</text>
+        <text x="470" y="153">10</text>
+        <text x="110" y="238">8</text>
+        <text x="282" y="238">7</text>
+        <text x="402" y="238">9</text>
+        <text x="540" y="238">3</text>
+        <text x="42" y="331">2</text>
+        <text x="180" y="331">4</text>
+        <text x="254" y="331">1</text>
+      </g>
+
+      <!-- 4. Index Labels (0 to 9) -->
+      <g id="index-labels" font-family="sans-serif" font-size="16" fill="#000000">
+        <text x="291" y="37">0</text>
+        <text x="167" y="127">1</text>
+        <text x="421" y="142">2</text>
+        <text x="76" y="210">3</text>
+        <text x="243" y="218">4</text>
+        <text x="359" y="218">5</text>
+        <text x="501" y="218">6</text>
+        <text x="14" y="303">7</text>
+        <text x="138" y="307">8</text>
+        <text x="223" y="307">9</text>
+      </g>
+
+    </svg>
+  </section>
+
+  <!-- Image 008 – Stack Diagram -->
+  <section>
+    <h2>Image 008 – Stack Diagram</h2>
+    <svg width="180" height="270" viewBox="0 0 180 270">
+      <defs>
+        <!-- Stack Arrowhead Marker Definition -->
+        <marker id="arrow-stack" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse">
+          <path d="M 0 0 L 10 5 L 0 10 z" fill="#000000" />
+        </marker>
+        <!-- Red Gradient Definition -->
+        <linearGradient id="redGradient" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#FF8A8A" />
+          <stop offset="100%" stop-color="#FF0000" />
+        </linearGradient>
+      </defs>
+
+      <!-- Red gradient boxes -->
+      <g id="stack-boxes">
+        <rect x="8" y="8" width="72" height="27" fill="url(#redGradient)" stroke="#000000" stroke-width="2" />
+        <rect x="100" y="8" width="72" height="27" fill="url(#redGradient)" stroke="#000000" stroke-width="2" />
+        <rect x="54" y="90" width="72" height="27" fill="url(#redGradient)" stroke="#000000" stroke-width="2" />
+        <rect x="54" y="126" width="72" height="27" fill="url(#redGradient)" stroke="#000000" stroke-width="2" />
+        <rect x="54" y="162" width="72" height="27" fill="url(#redGradient)" stroke="#000000" stroke-width="2" />
+      </g>
+
+      <!-- Purple container -->
+      <g id="stack-container">
+        <path d="M 45 90 L 45 261 L 135 261 L 135 122" fill="none" stroke="#9B9BFF" stroke-width="4" />
+      </g>
+
+      <!-- Purple triangle -->
+      <g id="stack-triangle">
+        <polygon points="90,199 57,215 123,215" fill="#9B9BFF" />
+      </g>
+
+      <!-- Arrows -->
+      <g id="stack-arrows">
+        <line x1="53" y1="43" x2="75" y2="81" stroke="#000000" stroke-width="1" marker-end="url(#arrow-stack)" />
+        <line x1="105" y1="80" x2="126" y2="43" stroke="#000000" stroke-width="1" marker-end="url(#arrow-stack)" />
+      </g>
+
+      <!-- Labels -->
+      <g id="stack-labels" font-family="sans-serif" font-size="13" fill="#000000">
+        <text x="26" y="69">push</text>
+        <text x="126" y="69">pop</text>
+        <text x="135" y="105">peek</text>
       </g>
     </svg>
   </section>
